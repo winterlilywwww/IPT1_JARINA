@@ -1,0 +1,181 @@
+
+
+
+ /* Sidebar Styles */
+ .sidebar {
+    display: flex; /* Use flexbox to center items */
+    justify-content: center; /* Center horizontally */
+    padding: 20px;
+    background-color: #ffe4e1; /* Light pink background */
+    border-radius: 10px; /* Rounded corners */
+    margin: 20px; /* Margin for spacing around the sidebar */
+}
+
+/* Navigation List */
+.horizontal-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Use flexbox for horizontal layout */
+    gap: 15px; /* Space between navigation items */
+}
+
+/* Navigation Items */
+.nav-item {
+    position: relative; /* To position the ribbons correctly */
+}
+
+/* Link Styles */
+.sidebar a {
+    display: block; /* Make the link area clickable */
+    padding: 15px 20px;
+    background-color: #f5c6d3; /* Soft pink for the links */
+    color: #d36e7f; /* Dark pink text color */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Link Hover Effect */
+.sidebar a:hover {
+    background-color: #ffb3c1; /* Brighter pink on hover */
+}
+
+/* Ribbons */
+.nav-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -25px; /* Adjust to position the ribbon */
+    width: 20px;
+    height: 100%;
+    background-color: #d36e7f; /* Dark pink ribbon */
+    border-radius: 0 5px 5px 0; /* Round the right corners */
+    transform: skew(30deg); /* Skew the ribbon for a stylish look */
+}
+
+/* Optional: Ribbons on Hover */
+.nav-item:hover::before {
+    background-color: #e64a75; /* Darker pink on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .sidebar {
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+
+    .horizontal-nav {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+    }
+
+    .nav-item {
+        margin-bottom: 10px; /* Space between items when stacked */
+    }
+}
+
+
+body {
+    background-color: #ce87ae84; /* Soft pink background */
+    font-family: 'Poppins', sans-serif;
+    color: #000; /* Default text color */
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4 {
+    margin: 0;
+    padding: 10px 0;
+}
+
+/* Sidebar styles */
+/* Flex container for the main content */
+.main-content {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center the main content */
+    align-items: flex-start; /* Align items at the start */
+    gap: 20px; /* Space between elements */
+    padding: 20px; /* Optional: add padding around the content */
+}
+
+/* About section wrapper */
+.about-container {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center elements horizontally */
+}
+
+/* Flex container for the about section */
+.about-content {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Align items vertically in the center */
+    gap: 20px; /* Add space between the image and text */
+}
+
+/* Style for the image */
+.avatar-box {
+    flex: 0 0 auto; /* Prevent the image from growing or shrinking */
+}
+
+.profile-pic {
+    width: 150px; /* Set a fixed width for the profile picture */
+    height: auto; /* Maintain the aspect ratio */
+    border-radius: 50%; /* Optional: make the image circular */
+    border: 4px solid #e489f0;
+}
+
+/* Text section */
+.about-text {
+    flex: 1; /* Allow the text to take the remaining space */
+}
+
+/* Optional: Additional styling for the article */
+.about {
+    margin: 20px 0; /* Add margin around the article */
+    background-color: #f9f9f9; /* Background color for the article */
+    padding: 20px; /* Add padding inside the article */
+    border-radius: 10px; /* Rounded corners for the article */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional: add shadow effect */
+}
+
+/* Style for the sidebar */
+.sidebar {
+    flex: 0 0 250px; /* Fixed width for the sidebar, adjust as needed */
+    background-color: #f1f1f1; /* Background color for the sidebar */
+    border-radius: 10px; /* Optional: rounded corners */
+    padding: 20px; /* Padding inside the sidebar */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional: shadow effect */
+}
+
+/* Center the "About Me" section */
+.about-container {
+    max-width: 800px; /* Optional: limit the width of the about section */
+}
+
+/* Button styles */
+.info_more-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #d36e7f; /* Button text color */
+}
+
+/* Contacts list styles */
+.contacts-list {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.icon-box {
+    margin-right: 10px;
+}
+
+.icon-box ion-icon {
+    color: #d36e7f; /* Icon color */
+}
