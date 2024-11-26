@@ -1,0 +1,117 @@
+
+/* Sidebar Styles */
+.sidebar {
+    display: flex; /* Use flexbox to center items */
+    justify-content: center; /* Center horizontally */
+    padding: 20px;
+    background-color: #fffdfd; /* Light pink background */
+    border-radius: 10px; /* Rounded corners */
+    margin: 20px; /* Margin for spacing around the sidebar */
+}
+
+/* Navigation List */
+.horizontal-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Use flexbox for horizontal layout */
+    gap: 15px; /* Space between navigation items */
+}
+
+/* Navigation Items */
+.nav-item {
+    position: relative; /* To position the ribbons correctly */
+}
+
+/* Link Styles */
+.sidebar a {
+    display: block; /* Make the link area clickable */
+    padding: 15px 20px;
+    background-color: #f5c6d3; /* Soft pink for the links */
+    color: #d36e7f; /* Dark pink text color */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Link Hover Effect */
+.sidebar a:hover {
+    background-color: #ffb3c1; /* Brighter pink on hover */
+}
+
+/* Ribbons */
+.nav-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -25px; /* Adjust to position the ribbon */
+    width: 20px;
+    height: 100%;
+    background-color: #d36e7f; /* Dark pink ribbon */
+    border-radius: 0 5px 5px 0; /* Round the right corners */
+    transform: skew(30deg); /* Skew the ribbon for a stylish look */
+}
+
+/* Optional: Ribbons on Hover */
+.nav-item:hover::before {
+    background-color: #e64a75; /* Darker pink on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .sidebar {
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+
+    .horizontal-nav {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+    }
+
+    .nav-item {
+        margin-bottom: 10px; /* Space between items when stacked */
+    }
+}
+ 
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .header h1 {
+            margin: 0;
+        }
+        .header p {
+            font-size: 18px;
+            color: #666;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .section h2 {
+            border-bottom: 2px solid #333;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        ul li {
+            margin-bottom: 10px;
+        }
